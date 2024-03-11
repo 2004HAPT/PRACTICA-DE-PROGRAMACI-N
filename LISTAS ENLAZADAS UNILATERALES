@@ -1,0 +1,28 @@
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+        // Crear una lista enlazada para almacenar los resultados
+        LinkedList<Integer> resultados = new LinkedList<>();
+
+        // Valores de los dados
+        int[] dados = {1, 4, 5, 3, 6, 1, 3, 2, 1, 4, 5, 6, 6, 2, 6, 1, 3, 2, 5, 4, 5, 1, 6, 4, 3};
+
+        // Iterar sobre los resultados de los dados
+        for (int resultado : dados) {
+            // Si el resultado es par, agregar al inicio de la lista
+            if (resultado % 2 == 0) {
+                resultados.addFirst(resultado);
+            } else { // Si el resultado es impar, agregar al final de la lista
+                resultados.addLast(resultado);
+            }
+        }
+
+        // Imprimir los resultados en el orden deseado
+        System.out.println("Orden de los resultados de los dados:");
+        for (int resultado : resultados) {
+            System.out.print(resultado + " ");
+        }
+    }
+}
+
