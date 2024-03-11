@@ -1,0 +1,22 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class ProgramaColas {
+    public static void main(String[] args) {
+        // Crear una cola de números enteros
+        Queue<Integer> cola = new LinkedList<>();
+
+        // Agregar elementos a la cola
+        cola.offer(10);
+        cola.offer(20);
+        cola.offer(30);
+        cola.offer(40);
+        cola.offer(50);
+
+        // Eliminar y mostrar elementos de la cola uno por uno
+        while (!cola.isEmpty()) {
+            int elemento = cola.poll();
+            System.out.println("Se eliminó de la cola: " + elemento);
+        }
+    }
+}
